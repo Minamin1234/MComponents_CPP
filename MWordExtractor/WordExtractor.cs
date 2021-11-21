@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Components
+using static MText.MText;
+
 namespace MWordExtractor
 {
     /// <summary>
