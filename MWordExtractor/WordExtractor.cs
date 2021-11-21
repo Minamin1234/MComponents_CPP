@@ -38,26 +38,17 @@ namespace MWordExtractor
         /// <returns>単語と一致したかどうか。一致しなければfalse</returns>
         public static bool Search(ref string target, string word,ESearchMode SearchMode = ESearchMode.Unclearly)
         {
-            bool frag = false;
-            for(int i = 0;i < target.Length - 1;i++)
+            string ctarget;
+            string cword;
+            switch(SearchMode)
             {
-                if(target[i] == word[0])
-                {
-                    for(int ii = 0;ii < word.Length -1;ii++)
-                    {
-                        frag = true;
-                        if (target[i + ii] != word[ii])
-                        {
-                            if (i + ii > target.Length - 1) return false;
-                            i += ii;
-                            frag = false;
-                            break;
-                        }
-                    }
-                    if (frag) return true;
-                }
+                case ESearchMode.Perfectly:
+                    break;
+
+                case ESearchMode.Unclearly:
+                    break;
             }
-            return false ;
+            return false;
         }
 
         /// <summary>
@@ -72,16 +63,16 @@ namespace MWordExtractor
         public static int SearchFirstWrd(ref string target,string word)
         {
             bool frag = false;
-            for (int i = 0; i < target.Length - 1; i++)
+            for (int i = 0; i < target.Length; i++)
             {
                 if (target[i] == word[0])
                 {
-                    for (int ii = 0; ii < word.Length - 1; ii++)
+                    for (int ii = 0; ii < word.Length; ii++)
                     {
                         frag = true;
                         if (target[i + ii] != word[ii])
                         {
-                            if (i + ii > target.Length - 1) return -1;
+                            if (i + ii > target.Length) return -1;
                             i += ii;
                             frag = false;
                             break;
