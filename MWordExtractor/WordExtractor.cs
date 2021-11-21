@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace MWordExtractor
 {
+    /// <summary>
+    /// 大文字小文字の区別をするかどうか
+    /// </summary>
+    public enum ESearchMode
+    {
+        /// <summary>
+        /// 大文字小文字を区別し、完全一致するもの
+        /// </summary>
+        Perfectly,
+        /// <summary>
+        /// 大文字小文字を区別せず、同じ文字であれば合致するものとみなす。
+        /// </summary>
+        Unclearly
+    }
     public static class WordExtractor
     {
+        public static int Up_LowerConstant = (int)('A' - 'a');
         public static string Version = "v0.1";
 
         /// <summary>
@@ -15,8 +30,9 @@ namespace MWordExtractor
         /// </summary>
         /// <param name="target"></param>
         /// <param name="word"></param>
-        /// <returns>同じ単語が見つかったかどうか</returns>
-        public static bool Search(ref string target, string word)
+        /// <param name="SearchMode"></param>
+        /// <returns>単語と一致したかどうか。一致しなければfalse</returns>
+        public static bool Search(ref string target, string word,ESearchMode SearchMode = ESearchMode.Unclearly)
         {
             bool frag = false;
             for(int i = 0;i < target.Length - 1;i++)
