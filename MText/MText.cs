@@ -227,5 +227,50 @@ namespace MText
             nstr = ntarget;
             return true;
         }
+
+        /// <summary>
+        /// 文字ABそれぞれが大文字小文字関係なく「文字」が等しいかどうかを返します。
+        /// 等しくなければFalseを返します。
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="B"></param>
+        /// <returns>等しいかどうか</returns>
+        public static bool IsEqual(char A,char B)
+        {
+            int distA = 0, distB = 0;
+            if (A >= 'A' && A <= 'Z') distA = (int)(A - 'A');
+            else if (A >= 'a' && A <= 'z') distA = (int)(A - 'a');
+            else return false;
+            if (B >= 'A' && B <= 'Z') distB = (int)(B - 'A');
+            else if (B >= 'a' && B <= 'z') distB = (int)(B - 'a');
+            else return false;
+            if (distA == distB) return true;
+            return false;
+        }
+
+        /// <summary>
+        /// 文字列ABそれぞれが、大文字小文字関係なしに等しいかどうかを返します。どちらも文字数が合致する必要があります。
+        /// 等しくなければFalseを返します。
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="B"></param>
+        /// <returns>それぞれが等しいかどうか</returns>
+        public static bool IsEqual(string A,string B)
+        {
+            int distA = 0, distB = 0;
+            if (A.Length != B.Length) return false;
+            for(int i = 0;i < A.Length;i++)
+            {
+                if (A[i] >= 'A' && A[i] <= 'Z') distA = (int)(A[i] - 'A');
+                else if (A[i] >= 'a' && A[i] <= 'z') distA = (int)(A[i] - 'a');
+                else if (A[i] == B[i]) continue;
+                else return false;
+                if (B[i] >= 'A' && B[i] <= 'Z') distB = (int)(B[i] - 'A');
+                else if (B[i] >= 'a' && B[i] <= 'z') distB = (int)(B[i] - 'a');
+                else return false;
+                if (distA != distB) return false;
+            }
+            return true;
+        }
     }
 }
