@@ -8,7 +8,7 @@ namespace MText
 {
     public static class MText
     {
-        public static string Version = "v0.1";
+        public static string Version = "v0.2";
         public static int UpLowerConstant = 'a' - 'A';
         /// <summary>
         /// 指定した文字が大文字であるかどうかを返します。
