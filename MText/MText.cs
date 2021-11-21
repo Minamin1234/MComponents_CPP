@@ -8,7 +8,8 @@ namespace MText
 {
     public static class MText
     {
-        public static int UpLowerConstant = 'z' - 'A';
+        public static string Version = "v0.1";
+        public static int UpLowerConstant = 'a' - 'A';
         /// <summary>
         /// 指定した文字が大文字であるかどうかを返します。
         /// </summary>
@@ -109,17 +110,17 @@ namespace MText
             foreach(var s in target)
             {
                 if (s >= 'A' && s <= 'Z') continue;
-                return false;
+                if (s >= 'a' && s <= 'z') return false;
             }
             return true;
         }
 
         /// <summary>
         /// 指定した文字列に大文字が含まれるかどうかを返します。
-        /// 含まれていない場合は-1を返します。
+        /// 含まれていない場合はFalseを返します。
         /// </summary>
         /// <param name="target"></param>
-        /// <returns>大文字が含まれるかどうか。含まれない場合は-1</returns>
+        /// <returns>大文字が含まれるかどうか。含まれない場合はFalse</returns>
         public static bool IsContainsUpper(string target)
         {
             foreach(var s in target)
@@ -139,17 +140,17 @@ namespace MText
             foreach(var s in target)
             {
                 if (s >= 'a' && s <= 'z') continue;
-                return false;
+                if (s >= 'A' && s <= 'Z') return false;
             }
             return true;
         }
 
         /// <summary>
         /// 指定した文字列に小文字が含まれるかどうかを返します。
-        /// 含まれない場合は-1を返します。
+        /// 含まれない場合はFalseを返します。
         /// </summary>
         /// <param name="target"></param>
-        /// <returns>小文字が含まれるかどうか。含まれない場合は-1</returns>
+        /// <returns>小文字が含まれるかどうか。含まれない場合はFalse</returns>
         public static bool IsContainsLower(string target)
         {
             foreach(var s in target)
