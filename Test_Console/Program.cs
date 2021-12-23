@@ -14,7 +14,10 @@ namespace Test_Console
             while(true)
             {
                 string cmd = Console.ReadLine();
-                List<string> Args = new List<string>(MCommandReader.GetArgs(cmd, ' '));
+                List<string> Args = new List<string>(MCommandReader.GetArgsInBlock(cmd,"{}",':'));
+                //Console.WriteLine(MCommandReader.GetValueInBlock(cmd));
+                Console.WriteLine(MCommandReader.DefaultBlockStr);
+                Console.WriteLine(MCommandReader.SeparationChr);
                 foreach (var arg in Args)
                 {
                     Console.WriteLine(arg);
