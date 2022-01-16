@@ -23,6 +23,7 @@ namespace MCommandCS
         {
             this.DefaultCommands.Add("help");
             this.DefaultCommands.Add("quit");
+            this.IncludeNewModule(new MStd());
         }
 
         public void IncludeNewModule(MModule newmodule)
