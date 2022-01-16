@@ -8,5 +8,22 @@ namespace MCommandCS
 {
     public class MModule
     {
+        public string ModuleName = "module";
+        public List<string> Commands;
+
+        public MModule()
+        {
+
+        }
+
+        virtual public void ExecuteCommand(List<string> args)
+        {
+
+        }
+
+        virtual public void ShowHelp()
+        {
+            
+        }
     }
 }
