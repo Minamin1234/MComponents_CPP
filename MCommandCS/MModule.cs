@@ -23,7 +23,11 @@ namespace MCommandCS
 
         virtual public void ShowHelp()
         {
-            
+            Console.WriteLine("----------Commands----------");
+            foreach(var cmd in this.Commands)
+            {
+                Console.WriteLine(this.ModuleName + "." + cmd);
+            }
         }
     }
 }
