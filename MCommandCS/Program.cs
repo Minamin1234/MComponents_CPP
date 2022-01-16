@@ -6,7 +6,8 @@ namespace MCommandCS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MCommand CmdDev = new MCommand();
+            CmdDev.Run();
         }
     }
 }

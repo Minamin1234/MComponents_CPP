@@ -9,8 +9,8 @@ namespace MCommandCS
     public class MCommand
     {
         public string Version = "v1.0";
-        protected List<MModule> Modules;
-        protected List<string> DefaultCommands;
+        protected List<MModule> Modules = new List<MModule>();
+        protected List<string> DefaultCommands = new List<string>();
         protected char ModuleSprt = '.';
         protected char SprtInArgs = ',';
 
@@ -46,6 +46,7 @@ namespace MCommandCS
         public List<string> DecodeArgs(string words)
         {
             var args = new List<string>();
+            args.Add("");
             int level = 0;
             bool modulefrag = false;
             foreach(var w in words)

@@ -9,7 +9,7 @@ namespace MCommandCS
     public class MModule
     {
         public string ModuleName = "module";
-        public List<string> Commands;
+        public List<string> Commands = new List<string>();
 
         public MModule()
         {
