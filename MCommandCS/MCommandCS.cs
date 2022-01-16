@@ -24,6 +24,7 @@ namespace MCommandCS
             this.DefaultCommands.Add("help");
             this.DefaultCommands.Add("quit");
             this.IncludeNewModule(new MStd());
+            this.IncludeNewModule(new MMath());
         }
 
         public void IncludeNewModule(MModule newmodule)
