@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MCommandCS
 {
+    /// <summary>
+    /// 基本的なコマンドを提供するモジュールクラス
+    /// </summary>
     public class MStd : MModule
     {
         public MStd()

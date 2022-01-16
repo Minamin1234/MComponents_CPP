@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MCommandCS
 {
+    /// <summary>
+    /// 数学コマンドを提供するモジュールクラス
+    /// </summary>
     public class MMath : MModule
     {
         public MMath()
