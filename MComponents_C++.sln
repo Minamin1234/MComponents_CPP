@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31613.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWordExtractor", "MWordExtractor\MWordExtractor.csproj", "{98DC44EE-AF5B-4471-8355-6D365077A5CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWordExtractor", "MWordExtractor\MWordExtractor.csproj", "{98DC44EE-AF5B-4471-8355-6D365077A5CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MText", "MText\MText.csproj", "{BCDDAA93-BB48-42DF-ABDF-BC680D182CD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MText", "MText\MText.csproj", "{BCDDAA93-BB48-42DF-ABDF-BC680D182CD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MCommandCS", "MCommandCS", "{4CC4127A-C650-4BAD-9B3A-5C4B469B8018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCommandCS", "MCommandCS\MCommandCS.csproj", "{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{BCDDAA93-BB48-42DF-ABDF-BC680D182CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCDDAA93-BB48-42DF-ABDF-BC680D182CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCDDAA93-BB48-42DF-ABDF-BC680D182CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4E688F5-1779-4F4F-97A1-1CE1D04FCC95} = {4CC4127A-C650-4BAD-9B3A-5C4B469B8018}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01A2931D-3797-4639-88A2-2B8C16F1D194}
