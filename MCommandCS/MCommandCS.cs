@@ -8,11 +8,13 @@ namespace MCommandCS
 {
     public class MCommand
     {
-        public string Version = "v1.0";
+        public string Version = "v1.1";
         protected List<MModule> Modules = new List<MModule>();
         protected List<string> DefaultCommands = new List<string>();
         protected char ModuleSprt = '.';
         protected char SprtInArgs = ',';
+        protected char Sprt = ' ';
+
 
         public MCommand()
         {
@@ -72,6 +74,12 @@ namespace MCommandCS
                     continue;
                 }
                 else if(w == ')')
+                {
+                    level++;
+                    args.Add("");
+                    continue;
+                }
+                else if(w == this.Sprt)
                 {
                     level++;
                     args.Add("");
